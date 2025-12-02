@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ПРОГНОЗ</title>
+</head>
+
+<head>
+    <h1>ПРОГНОЗ</h1>
+
+<head>
+
+<body>
+    <form actiton="{{url_for('main')}}" method="POST">
+        <fieldset>
+            <small>Соотношение матрица-наполнитель</small>
+            <input type = "text" name="Соотношение матрица-наполнитель">
+            <br>
+            <br>
+            <small>Плотность, кг/м3</small>
+            <input type = "text" name="Плотность, кг/м3">
+            <br>
+            <br>
+            <small>модуль упругости, ГПа</small>
+            <input type = "text" name="модуль упругости, ГПа">
+            <br>
+            <br>
+            <small>Количество отвердителя, м.%</small>
+            <input type = "text" name="Количество отвердителя, м.%">
+            <br>
+            <br>
+            <small>Содержание эпоксидных групп,%_2</small>
+            <input type = "text" name="Содержание эпоксидных групп,%_2">
+            <br>
+            <br>
+            <small>Температура вспышки, С_2</small>
+            <input type = "text" name="Температура вспышки, С_2">
+            <br>
+            <br>
+            <small>Поверхностная плотность, г/м2</small>
+            <input type = "text" name="Поверхностная плотность, г/м2">
+            <br>
+            <br>
+            <small>Модуль упругости при растяжении, ГПа</small>
+            <input type = "text" name="Модуль упругости при растяжении, ГПа">
+            <br>
+            <br>
+            <small>Прочность при растяжении, МПа</small>
+            <input type = "text" name="Прочность при растяжении, МПа">
+            <br>
+            <br>
+            <small>Потребление смолы, г/м2</small>
+            <input type = "text" name="Потребление смолы, г/м2">
+            <br>
+            <br>
+            <button type = "submit">РАССЧИТАТЬ</button>
+        </fieldset>
+    </form>  
+
+    <div>
+        {%if result %}
+        <p>РЕЗУЛЬТАТ ПРОГНОЗА</p>
+        <p>{{result}}</p>
+        {% endif %}
+    </div>
+</body>
+
+</html>
